@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>摸你傻私营Fumo屋</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        body {
+            background: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* 容器布局 */
+        .fumo-container {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            padding: 30px;
+            width: 900px;
+            max-width: 95%;
+        }
+        /* 左侧图片 */
+        .fumo-img {
+            width: 350px;
+            margin-right: 40px;
+            border-radius: 10px;
+        }
+        /* 右侧内容区 */
+        .content {
+            flex: 1;
+        }
+        /* 标题样式 */
+        .title {
+            font-size: 48px;
+            color: #d62828;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .tip-text {
+            color: #999;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        /* 表单样式 */
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #457b9d;
+        }
+        /* 按钮样式 */
+        .submit-btn {
+            background: #457b9d;
+            color: #fff;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #2a607c;
+        }
+        /* 提示文本 */
+        .alert-box {
+            margin-top: 20px;
+            color: #ff4444;
+            font-size: 14px;
+            display: none; /* 初始隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <div class="fumo-container">
+        <!-- 左侧Fumo图片（使用你提供的图床地址） -->
+        <img 
+            src="https://i.bobopic.com/small/35897624.jpg"
+            alt="Fumo玩偶"
+            class="fumo-img"
+        >
+        <!-- 右侧内容 -->
+        <div class="content">
+            <div class="title">劲爆福利!!</div>
+            <div class="subtitle">摸你傻私营 fumo 屋</div>
+            <div class="subtitle">六一开业大酬宾</div>
+            <div class="tip-text">输入以下信息奖励 baka 一只</div>
+            
+            <!-- 娱乐表单（无实际提交功能） -->
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="name">1. 你的名字</label>
+                    <input type="text" id="name" placeholder="例：琪露诺">
+                </div>
+                <div class="form-group">
+                    <label for="address">2. 家庭住址</label>
+                    <input type="text" id="address" placeholder="例：雾之湖">
+                </div>
+                <div class="form-group">
+                    <label for="idcard">3. 身份证号</label>
+                    <input type="text" id="idcard" placeholder="例：99999999999114514⑨">
+                </div>
+                <button type="submit" class="submit-btn" onclick="showJoke()">提交</button>
+            </form>
+            
+            <!-- 提示框 -->
+            <div class="alert-box" id="jokeBox">
+                baka~ 信息已被摸你傻偷偷收藏（大雾）<br>
+                （本表单仅作娱乐，不会真的收集信息哦~）
+            </div>
+        </div>
+    </div>
+
+    <!-- JS交互：点击后显示提示 -->
+    <script>
+        function showJoke() {
+            // 显示提示文本
+            document.getElementById('jokeBox').style.display = 'block';
+            // 弹窗玩梗（可选，增强趣味）
+            alert('baka~ 别真填呀！这只是东方梗娱乐页 (^_^)');
+        }
+    </script>
+</body>
+</html>
